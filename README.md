@@ -1,4 +1,4 @@
-# PolyLabel
+![desmos-graph](https://github.com/user-attachments/assets/1eedb43b-772d-4457-8b04-f08f646919b0)# PolyLabel
 The *pole of inaccessibility* of a polygon is the point that is farthest from any of its edges making it the most "inaccessible" within the shape. 
 This point is often used in geographic and computational geometry applications.
 
@@ -28,15 +28,15 @@ Test cases will be added in the near future.
 import numpy as np
 from polylabel import polylabel
 
-ring1 = np.array([[1, 2], [3, 4], [5, 0], [3, 2], [1, 2]], dtype=float)
-ring2 = np.array([[2.5, 3], [3, 3], [3, 2.5], [2.5, 3]], dtype=float)
-ring3 = np.array([[2, 2.25], [2.5, 2.25], [2.5, 2.75], [2, 2.5]], dtype=float)
+ring1 = np.array([[1, 2], [3, 4], [5, 1], [3, 2], [1, 2]])
+ring2 = np.array([[2.5, 3], [3, 3], [3, 2.5], [2.5, 3]])
+ring3 = np.array([[2, 2.25], [2.5, 2.25], [2.5, 2.75], [2, 2.5]])
 rings = [ring1, ring2, ring3]
-polylabel(rings, precision=0.1)
+polylabel(rings, precision=0.01)
 ```
 
-The output for qhull.py is a `Cell` object.
-You may directly access `Cell.c` and `Facet.d` to retrieve the center coordinates and radius.
+The output for is a `Cell` object.
+You may directly access `Cell.c` and `Cell.d` to retrieve the center coordinates and radius.
 
 ```python3
 > cell = polylabel(rings, precision=0.1)
@@ -51,8 +51,6 @@ You may directly access `Cell.c` and `Facet.d` to retrieve the center coordinate
 ```
 
 Upon plotting the circle, we find that it is reasonably accurate:
-
-![desmos-graph](https://github.com/user-attachments/assets/c987e392-600f-4db7-97fe-2e41d5ae21db)
 
 # Performance
 
