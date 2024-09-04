@@ -60,7 +60,7 @@ class Cell:
     def __gt__(self, other):
         return self.d > other.d
 
-def remix_polylabel(array, precision=1):
+def polylabel(array, precision=1):
     """Find the pole of inaccessibility using a grid approach."""
     # Precompute Polygon Data 
     polygon = Polygon(array)
