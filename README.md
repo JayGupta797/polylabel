@@ -56,22 +56,21 @@ Upon plotting the circle, we find that it is reasonably accurate:
 
 # Performance
 
-The remix scales well with as the number of edges increases. 
 The average performance over 100 trials for each country provided by `gpd.datasets.get_path('naturalearth_lowres')` is shared below.
+Notably, remix scales well with as the number of edges increases. 
 
-
-| Country                    | Vertices | Remix Avg Time | Original Avg Time |
-|----------------------------|----------|----------------|-------------------|
-| Canada                     | 794      | 0.032235       | 0.113350          |
-| Russia                     | 607      | 0.022418       | 0.002272          |
-| United States of America   | 447      | 0.031790       | 0.029915          |
-| Indonesia                  | 250      | 0.021947       | 0.009891          |
-| Australia                  | 241      | 0.011332       | 0.001975          |
-| China                      | 240      | 0.012288       | 0.001972          |
-| Brazil                     | 203      | 0.006835       | 0.016461          |
-| Mexico                     | 170      | 0.002716       | 0.007637          |
-| India                      | 136      | 0.002474       | 0.005608          |
-| Greenland                  | 132      | 0.006230       | 0.010859          |
+| Country   | Vertices | Remix Avg Time | Original Avg Time |
+|-----------|----------|----------------|-------------------|
+| Canada    | 794      | 0.032235       | 0.113350          |
+| Russia    | 607      | 0.022418       | 0.002272          |
+| USA       | 447      | 0.031790       | 0.029915          |
+| Indonesia | 250      | 0.021947       | 0.009891          |
+| Australia | 241      | 0.011332       | 0.001975          |
+| China     | 240      | 0.012288       | 0.001972          |
+| Brazil    | 203      | 0.006835       | 0.016461          |
+| Mexico    | 170      | 0.002716       | 0.007637          |
+| India     | 136      | 0.002474       | 0.005608          |
+| Greenland | 132      | 0.006230       | 0.010859          |
 
 # Dependencies
 This project uses `NumPy` for numerical computations.
