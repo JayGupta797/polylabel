@@ -1,4 +1,4 @@
-![desmos-graph](https://github.com/user-attachments/assets/1eedb43b-772d-4457-8b04-f08f646919b0)# PolyLabel
+# PolyLabel
 The *pole of inaccessibility* of a polygon is the point that is farthest from any of its edges making it the most "inaccessible" within the shape. 
 This point is often used in geographic and computational geometry applications.
 
@@ -40,24 +40,20 @@ You may directly access `Cell.c` and `Cell.d` to retrieve the center coordinates
 
 ```python3
 > cell = polylabel(rings, precision=0.1)
-> cell
-<polylabel.polylabel.Cell object at 0x7fef9032bee0>
-
-> cell.c
-[3.4375 2.1875]
-
-> cell.d
-0.4192627457812106
+> (cell.c, cell.d)
+(array([3.4902, 2.3301]), 0.5145)
 ```
 
 Upon plotting the circle, we find that it is reasonably accurate:
+
+![desmos-graph](https://github.com/user-attachments/assets/1eedb43b-772d-4457-8b04-f08f646919b0)
 
 # Performance
 
 The average performance over 100 trials for each country provided by `gpd.datasets.get_path('naturalearth_lowres')` is shared below.
 Notably, remix scales well with as the number of edges increases. 
 
-| Country   | Vertices | Remix Avg Time | Original Avg Time |
+| Shapefile | Vertices | Remix Avg Time | Original Avg Time |
 |-----------|----------|----------------|-------------------|
 | Canada    | 794      | 0.032235       | 0.113350          |
 | Russia    | 607      | 0.022418       | 0.002272          |
