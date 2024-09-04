@@ -51,7 +51,7 @@ Upon plotting the circle, we find that it is reasonably accurate:
 # Performance
 
 The average performance over 100 trials for each country provided by `gpd.datasets.get_path('naturalearth_lowres')` is shared below.
-Notably, remix scales well with as the number of edges increases. 
+Notably, the remix version scales well with as the number of edges increases. 
 
 | Shapefile | Vertices | Remix Avg Time | Original Avg Time |
 |-----------|----------|----------------|-------------------|
